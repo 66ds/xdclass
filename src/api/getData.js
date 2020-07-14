@@ -36,11 +36,7 @@ export const videoListApi = () => axios.get("/api/v1/pub/video/list")
  * 获取视频详细信息
  * @param {*} videoId 
  */
-export const videoInfoByIdApi = (videoId) => axios.get("/api/v1/pub/video/banner/find_video_info_by_id",{
-    params:{
-        videoId
-    }
-})
+export const videoInfoByIdApi = (videoId) => axios.get("/api/v1/pub/video/find_video_info_by_id/"+videoId)
 
 /**
  * 下单操作
