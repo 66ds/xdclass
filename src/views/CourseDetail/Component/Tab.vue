@@ -4,7 +4,7 @@
                 v-model="selectedLabelSlots"
                 show-slider
         >
-            <cube-tab v-for="(item, index) in tabs" :label="item.label" :key="item.label">
+            <cube-tab v-for="(item, index) in tabs" :label="item.label" :key="index">
             </cube-tab>
         </cube-tab-bar>
         <component :videoInfo="videoInfo" :videoDetailInfo="videoDetailInfo" :is='selectedLabelSlots == "简介"?"Summary":"CataLog"'></component>
