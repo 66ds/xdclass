@@ -44,9 +44,7 @@ export const videoInfoByIdApi = (videoId) => axios.get("/api/v1/pub/video/find_v
  * @param {*} token 
  */
 export const saveOrderInfoApi = (videoId,token) => axios.post("/api/v1/pri/order/save",{
-    params:{
         videoId
-    }
 },{
     headers:{
         token
@@ -57,7 +55,7 @@ export const saveOrderInfoApi = (videoId,token) => axios.post("/api/v1/pri/order
 * 用户订单列表
 * @param {*} token 
 */
-export const userVideoOrderListApi = (token) => axios.get("/api/vi/pri/order/list",{
+export const userVideoOrderListApi = (token) => axios.get("/api/v1/pri/order/list",{
     headers:{token}
 })
 

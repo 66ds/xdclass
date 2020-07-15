@@ -12,7 +12,7 @@
 export default {
   data() {
     return {
-      selectedLabelSlots: "/",
+      selectedLabelSlots: this.$store.state.selectedLabelSlots,
       tabs: [
         {
           label: "首页",

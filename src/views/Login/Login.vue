@@ -19,6 +19,7 @@ import { loginApi } from "@/api/getData";
 export default {
   data() {
     return {
+      tab:'/personal',
       model: {
         phone: "",
         password: ""
@@ -60,7 +61,13 @@ export default {
     };
   },
   created() {},
-  mounted() {},
+  mounted() {
+    if(this.$route.query.tab){
+      this.tab = this.$route.query.tab
+      this.$store.dispatch("setSlot",this.tab)
+      console.log(this.$store.state.selectedLabelSlots)
+    }
+  },
   methods: {
     //登录用户
     submitHandler(e, model) {
@@ -71,7 +78,7 @@ export default {
             //登录成功,跳转到个人中心
             localStorage.setItem("token", res.data.msg);
             this.$store.dispatch("setTokens", res.data.msg);
-            this.$router.push({ path: "/" });
+            this.$router.push({ path:this.tab});
           } else {
             const toast = this.$createToast({
               txt: res.data.msg,

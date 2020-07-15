@@ -5,11 +5,15 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-    token: localStorage.getItem("token") || ''
+    token: localStorage.getItem("token") || '',
+    selectedLabelSlots:'/'
   },
   mutations: {
     setToken(state,token){
       state.token = token
+    },
+    selectedLabelSlots(state,path){
+      state.selectedLabelSlots = path
     }
   },
   //异步调用
@@ -21,6 +25,9 @@ export default new Vuex.Store({
     },
     clearToken(context){
       context.commit('setToken','')
+    },
+    setSlot(context,path){
+      context.commit('selectedLabelSlots',path)
     }
   },
   modules: {
