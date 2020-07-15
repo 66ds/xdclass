@@ -1,10 +1,12 @@
 <template>
   <div id="app">
     <router-view />
+    <common-footer></common-footer>
   </div>
 </template>
 
 <script>
+  import CommonFooter from '@/components/CommonFooter'
 export default {
   data(){
     return{
@@ -12,7 +14,7 @@ export default {
     }
   },
   components:{
-    
+    CommonFooter
   }
 };
 </script>

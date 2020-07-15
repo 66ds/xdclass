@@ -5,15 +5,12 @@
     <home-banner :banners="banners"></home-banner>
     <!--视频列表-->
     <video-list :videoList="videoList"></video-list>
-    <!--底部-->
-    <common-footer></common-footer>
   </div>
 </template>
 
 <script>
 import HomeBanner from "./Component/Banner";
 import VideoList from "./Component/VideoList";
-import CommonFooter from "@/components/CommonFooter";
 import { videoBannderListApi, videoListApi } from "@/api/getData.js";
 export default {
   //声明数据源
@@ -34,7 +31,6 @@ export default {
   components: {
     HomeBanner,
     VideoList,
-    CommonFooter
   },
   //定义方法
   methods: {

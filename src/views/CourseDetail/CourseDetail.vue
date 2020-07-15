@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="detail">
         <!--详细页导杆栏-->
         <detail-header :videoInfo="videoInfo"></detail-header>
 
@@ -57,11 +57,14 @@
 </script>
 
 <style scoped>
+  .detail{
+        padding-bottom: 98px;
+    }
  footer{
      position:fixed;
      width: 100%;
      z-index: 999;
-     bottom: 0;
+     bottom: 47px;
      padding: 8px 0;
      background-color: #fff;
      box-shadow: 0 -2px 4px 0 rgba(0,0,0,0.05) ;
