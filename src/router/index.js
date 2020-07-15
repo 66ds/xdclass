@@ -32,11 +32,17 @@ Vue.use(VueRouter)
     {
       path:"/order",
       name:"Order",
-      component:Order
+      component:Order,
+      meta:{
+        requiredAuth:true
+      }
     },{
       path:"/pay",
       name:"Pay",
-      component:Pay
+      component:Pay,
+      meta:{
+        requiredAuth:true
+      }
     },{
       path:"/personal",
       name:"Personal",
@@ -51,5 +57,7 @@ Vue.use(VueRouter)
 const router = new VueRouter({
   routes
 })
+
+
 
 export default router
